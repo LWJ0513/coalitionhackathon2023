@@ -28,8 +28,10 @@ const PartyCard = ({ party }: PartyProps): JSX.Element => {
   const navigate = useNavigate();
 
   const timer = (createdDate: Date): string => {
-    const diffHours: number = differenceInHours(new Date(), createdDate);
-    const diffMinutes: number = differenceInMinutes(new Date(), createdDate);
+    // 서버 시간 차이로 차감
+    const diffHours: number = differenceInHours(new Date(), createdDate) - 9;
+    const diffMinutes: number =
+      differenceInMinutes(new Date(), createdDate) - 9 * 60;
     if (diffHours === 0) return diffMinutes + " minutes ago";
     else if (diffHours < 24) return diffHours + " hours ago";
     else return Math.floor(diffHours / 24) + " days ago";
