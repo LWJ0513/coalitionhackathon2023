@@ -37,34 +37,28 @@ const Party = (): JSX.Element => {
 
   useEffect(() => {
     getPartyList();
-  }, []);
+  }, [list]);
 
   return (
-    <Box sx={{ height: "100%" }}>
-      {list.length === 0 ? (
-        <Loading />
-      ) : (
-        <>
-          <Stack sx={{ overflow: "auto", px: 1, height: "90%" }}>
-            {list.map((item, index) => (
-              <PartyCard key={index} party={item} />
-            ))}
-          </Stack>
-          <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
-            <IconButton
-              aria-label="delete"
-              variant="plain"
-              sx={{}}
-              onClick={() => {
-                setIsOpen(true);
-              }}
-            >
-              <AddCircleIcon fontSize="large" />
-            </IconButton>
-          </Box>
-          <CreateModal isOpen={isOpen} setIsOpen={setIsOpen} />
-        </>
-      )}
+    <Box sx={{ height: "100%", width: "90%" }}>
+      <Stack sx={{ overflow: "auto", px: 1, height: "90%" }}>
+        {list.map((item, index) => (
+          <PartyCard key={index} party={item} />
+        ))}
+      </Stack>
+      <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
+        <IconButton
+          aria-label="delete"
+          variant="plain"
+          sx={{}}
+          onClick={() => {
+            setIsOpen(true);
+          }}
+        >
+          <AddCircleIcon fontSize="large" />
+        </IconButton>
+      </Box>
+      <CreateModal isOpen={isOpen} setIsOpen={setIsOpen} />
     </Box>
   );
 };
