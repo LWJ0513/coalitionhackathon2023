@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    // 추가된 것 ./src를 절대 경로로 지정
+    "baseUrl": "./src",
+    "allowJs": true,
+    // .d.ts 파일 생성여부
+    "declaration": true,
+    // 오로지 .d.ts 파일만 생성하고 .js 파일은 출력에서 제외
+    "emitDeclarationOnly": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": false,
+    "jsx": "react-jsx"
+  },
+  "include": ["src"],
+  // type check test tool configuration
+  "tsd": {
+    "testFiles": ["types/**/*.test-d.ts"]
+  }
+}
+
+// $tsc : 적용?

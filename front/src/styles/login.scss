@@ -1,0 +1,38 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  height: 90%;
+  width: 100%;
+}
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  height: 100%;
+}
+
+.title {
+  height: 10%;
+  font-size: 40px;
+}
+
+.subtitle {
+  height: 30%;
+  font-size: 20px;
+}
+
+// .title {
+//   display: flex;
+//   height: 35%;
+//   font-size: 20px;
+//   align-items: flex-start;
+//   justify-items: center;
+//   font-size: 30px;
+// }
+
+// .subtitle {
+//   display: flex;
+//   height: 35%;
+// }
