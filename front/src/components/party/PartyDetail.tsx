@@ -141,6 +141,8 @@ const PartyDetail = (): JSX.Element => {
               variant="contained"
               disabled={isWriter}
               onClick={async () => {
+                if (detail.current >= detail.max)
+                  return alert("허용 인원을 초과하였습니다.");
                 const response = await PartyService.participatePartyDetail(id);
                 setIsCheck(true);
               }}
