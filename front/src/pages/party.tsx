@@ -37,7 +37,7 @@ const Party = (): JSX.Element => {
 
   useEffect(() => {
     getPartyList();
-  }, [list]);
+  }, []);
 
   return (
     <Box sx={{ height: "100%", width: "90%" }}>
